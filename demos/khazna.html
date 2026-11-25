@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>خزنة حساباتي | Demo</title><link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap" rel="stylesheet"><style>
+:root{--bg:#070b0a;--card:#0d1513;--line:#1b2a26;--g:#2ee59d;--tx:#e6f2ee;--mu:#8aa39b}
+*{box-sizing:border-box;margin:0}body{background:var(--bg);color:var(--tx);font-family:'Almarai',sans-serif;line-height:1.7}
+.ban{background:rgba(46,229,157,.1);border-bottom:1px solid var(--line);padding:8px 5vw;font-size:13px;color:var(--g);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.ban a{color:var(--g)}
+.app{display:grid;grid-template-columns:210px 1fr;min-height:calc(100vh - 40px)}
+aside{border-inline-end:1px solid var(--line);padding:22px 14px;background:#0a100f}
+aside h1{font-size:19px;margin-bottom:20px;color:var(--g)}
+aside button{display:block;width:100%;text-align:start;background:none;border:0;color:var(--mu);font:inherit;padding:10px 14px;border-radius:10px;cursor:pointer;margin-bottom:4px}
+aside button.on,aside button:hover{background:rgba(46,229,157,.1);color:var(--g)}
+main{padding:28px 4vw}h2{margin-bottom:18px;font-size:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:24px}
+.k{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}.k span{color:var(--mu);font-size:13px}.k b{display:block;font-size:26px;color:var(--g)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+th,td{padding:11px 14px;text-align:start;border-bottom:1px solid var(--line);font-size:14px}th{color:var(--mu);font-weight:400;background:#0a100f}
+.tag{padding:2px 10px;border-radius:12px;font-size:12px;background:rgba(46,229,157,.12);color:var(--g)}.tag.w{background:rgba(255,190,70,.12);color:#ffbe46}.tag.r{background:rgba(255,100,100,.12);color:#ff7070}
+.bars{display:flex;align-items:flex-end;gap:10px;height:150px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:24px}
+.bars i{flex:1;background:linear-gradient(var(--g),#14b87a55);border-radius:6px 6px 0 0;transition:.6s}
+.scr{display:none}.scr.on{display:block}
+label{display:block;color:var(--mu);font-size:13px;margin:12px 0 4px}input,select{width:100%;max-width:340px;background:var(--card);border:1px solid var(--line);color:var(--tx);padding:10px;border-radius:10px;font:inherit}
+.btn{margin-top:16px;background:var(--g);color:#04120c;border:0;border-radius:10px;padding:10px 26px;font:inherit;font-weight:700;cursor:pointer}
+.note{margin-top:22px;color:var(--mu);font-size:13px}
+@media(max-width:700px){.app{grid-template-columns:1fr}aside{display:flex;overflow:auto;gap:6px;padding:10px}aside h1{display:none}aside button{width:auto;white-space:nowrap}}
+</style></head><body>
+<div class="ban"><span>نسخة ديمو مقصوصة · بيانات وهمية / Trimmed demo · fake data</span><a href="../">← Portfolio</a></div>
+<div class="app"><aside><h1>خزنة حساباتي</h1><button class="on" onclick="go(0)">الحسابات</button><button class="" onclick="go(1)">إضافة حساب</button><button class="" onclick="go(2)">الأمان</button></aside><main><div class="scr on"><h2>الحسابات</h2><table><tr><th>الخدمة</th><th>المستخدم</th><th>كلمة المرور</th></tr><tr><td>موقع تجريبي 1</td><td>demo1@example.com</td><td>••••••••</td></tr><tr><td>موقع تجريبي 2</td><td>demo2@example.com</td><td>••••••••</td></tr><tr><td>موقع تجريبي 3</td><td>demo3@example.com</td><td>••••••••</td></tr></table></div><div class="scr "><h2>إضافة حساب</h2><label>اسم الخدمة</label><input placeholder="مثال: خدمة تجريبية"><label>اسم المستخدم</label><input placeholder="demo@example.com"><label>كلمة المرور</label><input type="password" placeholder="بيانات وهمية فقط"><button class="btn" onclick="alert('ديمو: لا يتم حفظ أي بيانات')">حفظ</button></div><div class="scr "><h2>الأمان</h2><div class="cards"><div class="k"><span>قوة كلمات المرور</span><b>تجريبي</b></div><div class="k"><span>حسابات تحتاج تحديث</span><b>2</b></div></div><p class="note">نموذج أولي للعرض فقط. لا تدخل بيانات حقيقية.</p></div></main></div>
+<script>function go(i){document.querySelectorAll('.scr').forEach((e,j)=>e.classList.toggle('on',i==j));document.querySelectorAll('aside button').forEach((e,j)=>e.classList.toggle('on',i==j))}</script></body></html>
